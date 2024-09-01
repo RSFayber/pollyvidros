@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    grid-template-columns: 1fr 4fr 1fr;   
+    grid-template-areas: "a b c";
+}
+
+h2{
+    font-family: Alegreya Sans;
+    font-size: 40px;
+    color: #172847;
+}
+
+p{
+    font-family: Roboto;
+    font-weight: regular;
+    font-size: 15px;
+}
+.botao {
+    color: white;
+    align-items: center;
+}
+
+.botao img{
+    margin-left: 10px; /* Espaçamento entre o texto e a imagem */
+    width: 24px;
+    height: 24px;
+}
+
+#botao-whats {
+    width: 80px;
+    height: 80px;
+    position: fixed; /* Adicionei esta linha para fixar o botão na tela */
+    right: 20px;
+    bottom: 20px;
+    border-radius: 100px;
+    border: none; /* Removi a borda padrão do botão */
+    background: none; /* Removi o fundo padrão do botão */
+    padding: 0; /* Removi o padding padrão do botão */
+}
+
+#botao-whats img {
+    width: 100%; /* Ajusta a imagem para preencher o botão */
+    height: 100%;
+    border-radius: 35px; /* Garante que a imagem também tenha bordas arredondadas */
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative; 
+    z-index: 10;
+}
+header img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover; 
+
+}
+
+#nav-topo{
+    width: 100%;
+    height: 8%;
+}
+
+nav {
+    height: 80px;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    background-color: white;
+    font-family: Roboto;
+}
+
+
+.hero {
+    width: 100%;
+    height: 700px;
+}
+
+#img-hero {
+    width: 100%;
+    height: 600px;
+    position: sticky;
+}
+
+.menu {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#servicos {
+    width: 100%;
+    height: 40%;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr 4fr 1fr;   
+    grid-template-areas: "a b c";
+}
+
+
+#servicos h1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#servicos div {
+    text-align: center;
+    grid-area: b;
+
+}
+.container-servicos div {
+    width: 150px;
+    height: 150px;
+    borde: 1px solid #c4c4c4;
+    background-color: f5f3f3;
+    padding: 30px;
+    margin: 20px
+
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    flex-direction: line;
+    justify-content: left;
+}
+
+#servicos img{
+    width: 200px; 
+    height: 300px;
+    border-radius: 10px;
+}
+
+li {
+        margin: 20px;
+}
+
+.carousel-inner{
+    padding-left: 100px;
+}
+
+#pag-sobre {
+    width: 100%;
+    height: 40%;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+#sobre h1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#container-sobre {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    background-color: #EAEAEA;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#img-sobre{
+    padding: 30px;
+    margin: 20px
+
+}
+
+#txt-sobre{
+    padding-left: 30px;
+    margin: 20px
+}
+
+#pag-contato{
+    width: 80%;
+    height: 440px;
+    display: flex;
+    padding-left: 10%;
+}
+
+#img-especialista{
+    float: right;
+    padding: 30px;
+    margin: 20px
+
+}
+#container-contato{
+    display: flex;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #pag-contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Ajuste conforme necessário */
+    }
+}
+
+
+
+#produtos{
+    display: flex;
+}
+
+
+
+button{
+    align-items: center;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #172847;
+}
+
+.star2{
+    display: flex;
+}
+
+/*pag-avaliações*/
+#pag-avaliacoes {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+#titulo-avaliacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0px 50px 0px;
+}
+
+#avaliacoes h2 {
+    font-size: 32px;
+    color: #333;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 80%;
+    height: 40px;
+    background-color: #EAEAEA;
+}
+
+
+
+
+

@@ -28,12 +28,14 @@ header img {
 }
 
 nav {
-    height: 30px;
     text-align: center;
     padding: 10px;
     font-size: 15px;
     background-color: white;
     font-family: Roboto;
+    height: 40px;
+    position: sticky;
+    top: 0px;
 }
 
 .menu {
@@ -78,6 +80,14 @@ nav {
     background-color: rgb(255, 255, 255);
     grid-template-columns: 1fr 4fr 1fr;   
     grid-template-areas: "a b c";
+}
+
+#ul-servicos{
+    display: flex;
+    align-items: center;
+    flex-direction: line;
+    justify-content: left;
+    list-style-type: none;
 }
 
 #servicos h1 {

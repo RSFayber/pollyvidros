@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Produtos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(168, 216, 235);
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel-wrapper">
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="produto1.jpg" alt="Produto 1">
+            <img src="produto2.jpg" alt="Produto 2">
+            <img src="produto3.jpg" alt="Produto 3">
+            <img src="produto4.jpg" alt="Produto 4">
+            <img src="produto5.jpg" alt="Produto 5">
+            <img src="produto6.jpg" alt="Produto 6">
+        </div>
+        <div class="arrow arrow-left" onclick="prevSlide()">&#9664;</div>
+        <div class="arrow arrow-right" onclick="nextSlide()">&#9654;</div>
+    </div>
+</div>
+
+<script>
+    let index = 0;
+    const slides = document.querySelector('.carousel').children;
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+        const carousel = document.querySelector('.carousel');
+        carousel.style.transform = `translateX(-${index * 100 / 3}%)`;
+    }
+
+    function prevSlide() {
+        if (index === 0) {
+            index = totalSlides - 3; // Vai para o final
+        } else {
+            index--;
+        }
+        updateCarousel();
+    }
+
+    function nextSlide() {
+        if (index === totalSlides - 3) {
+            index = 0; // Volta para o início
+        } else {
+            index++;
+        }
+        updateCarousel();
+    }
+
+    updateCarousel();
+</script>
+
+</body>
+</html>
